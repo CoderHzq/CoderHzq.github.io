@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Androidstudio,android疑难杂症," />
 
 
 
@@ -95,16 +95,27 @@
 
 
 
-<meta name="description" content="勿以Bug小而不改！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zhiqing Huang&#39;s Notes">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="#AndroidStudio查看源码相关配置 最近换了一台机器不知道是安装的时候没搞好还是什么缘故，用AndroidStudio导致查看源码出现了  Sources for ‘Android API 26 Platform’ not found.  Google了一番后，果然还是有前辈遇到了和我一样的问题。虽然如此 但还是想记录下方便以后自己查阅的同时也希望能帮助到遇到同样问题的道友吧 一、当你查">
+<meta name="keywords" content="Androidstudio,android疑难杂症">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AndroidStudio关联Android源码的正确姿势">
+<meta property="og:url" content="http://yoursite.com/2017/09/11/AndroidStudio关联Android源码的正确姿势/index.html">
 <meta property="og:site_name" content="Zhiqing Huang&#39;s Notes">
-<meta property="og:description" content="勿以Bug小而不改！">
+<meta property="og:description" content="#AndroidStudio查看源码相关配置 最近换了一台机器不知道是安装的时候没搞好还是什么缘故，用AndroidStudio导致查看源码出现了  Sources for ‘Android API 26 Platform’ not found.  Google了一番后，果然还是有前辈遇到了和我一样的问题。虽然如此 但还是想记录下方便以后自己查阅的同时也希望能帮助到遇到同样问题的道友吧 一、当你查">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://oif9go4ms.bkt.clouddn.com/blog/170906/8GjLbl7A2k.png?imageslim">
+<meta property="og:image" content="http://oif9go4ms.bkt.clouddn.com/blog/170906/AFE3908acG.png?imageslim">
+<meta property="og:image" content="http://oif9go4ms.bkt.clouddn.com/blog/170906/A6f0LcJb80.png?imageslim">
+<meta property="og:image" content="http://oif9go4ms.bkt.clouddn.com/blog/170906/c57e6iKgKg.png?imageslim">
+<meta property="og:image" content="http://oif9go4ms.bkt.clouddn.com/blog/170906/1412KABDhk.png?imageslim">
+<meta property="og:image" content="http://oif9go4ms.bkt.clouddn.com/blog/170906/KE705gJH4l.png?imageslim">
+<meta property="og:image" content="http://oif9go4ms.bkt.clouddn.com/blog/170906/LJmHh8cH6K.png?imageslim">
+<meta property="og:image" content="http://oif9go4ms.bkt.clouddn.com/blog/170906/g8dK4kHcCK.png?imageslim">
+<meta property="og:updated_time" content="2017-09-11T14:08:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhiqing Huang&#39;s Notes">
-<meta name="twitter:description" content="勿以Bug小而不改！">
+<meta name="twitter:title" content="AndroidStudio关联Android源码的正确姿势">
+<meta name="twitter:description" content="#AndroidStudio查看源码相关配置 最近换了一台机器不知道是安装的时候没搞好还是什么缘故，用AndroidStudio导致查看源码出现了  Sources for ‘Android API 26 Platform’ not found.  Google了一番后，果然还是有前辈遇到了和我一样的问题。虽然如此 但还是想记录下方便以后自己查阅的同时也希望能帮助到遇到同样问题的道友吧 一、当你查">
+<meta name="twitter:image" content="http://oif9go4ms.bkt.clouddn.com/blog/170906/8GjLbl7A2k.png?imageslim">
 
 
 
@@ -134,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/11/AndroidStudio关联Android源码的正确姿势/"/>
 
 
 
 
 
-  <title>Zhiqing Huang's Notes</title>
+  <title>AndroidStudio关联Android源码的正确姿势 | Zhiqing Huang's Notes</title>
   
 
 
@@ -159,8 +170,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -253,9 +263,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -285,9 +295,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/11/AndroidStudio关联Android源码的正确姿势/" itemprop="url">AndroidStudio关联Android源码的正确姿势</a></h1>
+          <h1 class="post-title" itemprop="name headline">AndroidStudio关联Android源码的正确姿势</h1>
         
 
         <div class="post-meta">
@@ -359,23 +367,50 @@
       
 
       
-        
-          
-          #AndroidStudio查看源码相关配置
-最近换了一台机器不知道是安装的时候没搞好还是什么缘故，用AndroidStudio导致查看源码出现了
+        <p>#AndroidStudio查看源码相关配置</p>
+<p>最近换了一台机器不知道是安装的时候没搞好还是什么缘故，用AndroidStudio导致查看源码出现了</p>
+<blockquote>
+<p>Sources for ‘Android API 26 Platform’ not found.</p>
+</blockquote>
+<p>Google了一番后，果然还是有前辈遇到了和我一样的问题。虽然如此 但还是想记录下方便以后自己查阅的同时也希望能帮助到遇到同样问题的道友吧</p>
+<h2 id="一、当你查看源码的时候出现这种情况："><a href="#一、当你查看源码的时候出现这种情况：" class="headerlink" title="一、当你查看源码的时候出现这种情况："></a>一、当你查看源码的时候出现这种情况：</h2><div align="center"><br><img src="http://oif9go4ms.bkt.clouddn.com/blog/170906/8GjLbl7A2k.png?imageslim" alt="mark"><br></div>
 
-Sources for ‘Android API 26 Platform’ not found.
+<p>先不要急忙点击 <strong> Download</strong> 最好是先去你SDK安装目录下的 <strong>sources</strong> 文件夹下看下是否已经存在对象API版本的源码 有时候其实已经存在了。</p>
+<p>像我这样就是确实没有26的源码</p>
+<div align="center"><br><img src="http://oif9go4ms.bkt.clouddn.com/blog/170906/AFE3908acG.png?imageslim" alt="mark"><br></div><br>这个时候我有两种选择：<br><br>&gt; 1.下载26的源码<br><br>&gt; 2.直接使用已存在的源码(23/24/25)<br><br>这里先说第二种吧。来到你对应 <strong>Module</strong> 所在的 <strong>build.gradle</strong> 文件, 修改<strong>compileSdkVersion</strong> 和 <strong>targetSdkVersion</strong> 版本对应存在源码的版本 像我的23/24/25<br>这里我就改成25的吧<br><br>修改之前是这样的：<br><br><div align="center"><br><img src="http://oif9go4ms.bkt.clouddn.com/blog/170906/A6f0LcJb80.png?imageslim" alt="mark"><br></div>
 
-Google了一番后，果然还是有前辈遇到了和我一样
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/11/AndroidStudio关联Android源码的正确姿势/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<p>修改之后是这样的:</p>
+<div align="center"><br><img src="http://oif9go4ms.bkt.clouddn.com/blog/170906/c57e6iKgKg.png?imageslim" alt="mark"><br></div>
+
+<p>修改完成之后记得同步一下，然后回去再试试打开源码看看正常来说应该就可以了 这里我以Handler的为例。<br>修改之前(26):</p>
+<div align="center"><br><img src="http://oif9go4ms.bkt.clouddn.com/blog/170906/1412KABDhk.png?imageslim" alt="mark"><br></div>
+
+<p>修改之后(25):</p>
+<div align="center"><br><img src="http://oif9go4ms.bkt.clouddn.com/blog/170906/KE705gJH4l.png?imageslim" alt="mark"><br></div>
+
+<p>如果你修改之后还是查看不了,这个时候你就需要去修改下配置文件了,文件目录在</p>
+<blockquote>
+<p>windows下：系统盘:\Users\username.AndroidStudio2.3\config\options</p>
+<p>Mac下：~/Library/Preferences/.AndroidStudio2.3/config/options</p>
+</blockquote>
+<p>找到<strong>jdk.table.xml</strong>,如果你有 <strong>Everything</strong> 可以直接搜索, Mac用户可以直接用 <strong>Spotlight</strong>搜索,然后打开修改对应的版本关联信息。</p>
+<blockquote>
+<p>这里我需要关联25的源码</p>
+</blockquote>
+<div align="center"><br><img src="http://oif9go4ms.bkt.clouddn.com/blog/170906/LJmHh8cH6K.png?imageslim" alt="mark"><br></div>
+
+<p>这样就表示关联好了。</p>
+<blockquote>
+<p>这里对比下没有关联源码的</p>
+</blockquote>
+<div align="center"><br><img src="http://oif9go4ms.bkt.clouddn.com/blog/170906/g8dK4kHcCK.png?imageslim" alt="mark"><br></div>
+
+<p>从上面可以知道 我源码文件夹没有26的源码 回到第一步如果你选择了下载26的源码的话。下载完成之后 <strong>sources</strong> 文件夹就会右26的源码 然后按照这个步骤关联就行了。</p>
+<p><strong>最后记得重启AS</strong></p>
+<blockquote>
+<p>ps:貌似26的源码现在还不能通过AS下载…</p>
+</blockquote>
+
       
     </div>
     
@@ -390,164 +425,38 @@ Google了一番后，果然还是有前辈遇到了和我一样
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/09/开篇/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="黄志清">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhiqing Huang's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/09/开篇/" itemprop="url">一个亿的项目正式启动了！</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-09T17:00:27+08:00">
-                2017-09-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/开篇/" itemprop="url" rel="index">
-                    <span itemprop="name">开篇</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Androidstudio/" rel="tag"># Androidstudio</a>
           
-
+            <a href="/tags/android疑难杂症/" rel="tag"># android疑难杂症</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          开篇
-
-前言 本人主要从事软件开发这块,现在主要是负责公司Android项目的开发，业余时间则喜欢看点书，运动和搞自媒体。前段时间利用晚上业余，又回味了一下吴军老师的《浪潮之巅》，然后准备睡觉的时候，躺床上辗转反侧死活睡不着。 于是就回忆了一下来深圳这几年的经历。且不说一把鼻涕一把泪，但还是挺心酸的
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/09/开篇/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/09/开篇/" rel="next" title="一个亿的项目正式启动了！">
+                <i class="fa fa-chevron-left"></i> 一个亿的项目正式启动了！
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -557,10 +466,11 @@ Google了一番后，果然还是有前辈遇到了和我一样
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -568,6 +478,12 @@ Google了一番后，果然还是有前辈遇到了和我一样
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
 
         </div>
         
@@ -588,8 +504,17 @@ Google了一番后，果然还是有前辈遇到了和我一样
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">黄志清</p>
@@ -650,6 +575,22 @@ Google了一番后，果然还是有前辈遇到了和我一样
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、当你查看源码的时候出现这种情况："><span class="nav-number">1.</span> <span class="nav-text">一、当你查看源码的时候出现这种情况：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -777,6 +718,10 @@ Google了一番后，果然还是有前辈遇到了和我一样
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
@@ -802,6 +747,11 @@ Google了一番后，果然还是有前辈遇到了和我一样
   
     
 
+    
+      <!-- UY BEGIN -->
+      <div id="uyan_frame"></div>
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2143577"></script>
+      <!-- UY END -->
     
   
 
