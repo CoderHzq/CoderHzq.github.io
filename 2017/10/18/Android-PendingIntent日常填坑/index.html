@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="开篇," />
+  <meta name="keywords" content="android," />
 
 
 
@@ -95,21 +95,18 @@
 
 
 
-<meta name="description" content="开篇  前言 本人主要从事软件开发这块,现在主要是负责公司Android项目的开发，业余时间则喜欢看点书，运动和搞自媒体。前段时间利用晚上业余，又回味了一下吴军老师的《浪潮之巅》，然后准备睡觉的时候，躺床上辗转反侧死活睡不着。 于是就回忆了一下来深圳这几年的经历。且不说一把鼻涕一把泪，但还是挺心酸的。  从15年中旬来深圳，找到第一份实习工作(Android开发)。然后到年底换工作到现在的公司。期">
-<meta name="keywords" content="开篇">
+<meta name="description" content="PendingIntent填坑记PendingIntent作用其实和Intent作用差不多，可以理解为是一种特殊的Intent。和Intent区别在于执行的时机不一样。Intent是立刻执行，PendingIntent是等待条件满足在执行。常用于通知、短信、闹钟等应用情景。 PendingIntent Flag介绍FLAG_ONE_SHOT：获取的PendingIntent只能使用一次。 FLAG">
+<meta name="keywords" content="android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一个亿的项目正式启动了！">
-<meta property="og:url" content="https://coderhzq.github.io/2017/09/09/开篇/index.html">
+<meta property="og:title" content="Android PendingIntent日常填坑">
+<meta property="og:url" content="https://coderhzq.github.io/2017/10/18/Android-PendingIntent日常填坑/index.html">
 <meta property="og:site_name" content="Zhiqing Huang&#39;s Notes">
-<meta property="og:description" content="开篇  前言 本人主要从事软件开发这块,现在主要是负责公司Android项目的开发，业余时间则喜欢看点书，运动和搞自媒体。前段时间利用晚上业余，又回味了一下吴军老师的《浪潮之巅》，然后准备睡觉的时候，躺床上辗转反侧死活睡不着。 于是就回忆了一下来深圳这几年的经历。且不说一把鼻涕一把泪，但还是挺心酸的。  从15年中旬来深圳，找到第一份实习工作(Android开发)。然后到年底换工作到现在的公司。期">
+<meta property="og:description" content="PendingIntent填坑记PendingIntent作用其实和Intent作用差不多，可以理解为是一种特殊的Intent。和Intent区别在于执行的时机不一样。Intent是立刻执行，PendingIntent是等待条件满足在执行。常用于通知、短信、闹钟等应用情景。 PendingIntent Flag介绍FLAG_ONE_SHOT：获取的PendingIntent只能使用一次。 FLAG">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oif9go4ms.bkt.clouddn.com/20170909150494672167326.png">
-<meta property="og:image" content="http://oif9go4ms.bkt.clouddn.com/20170909150494802446534.png">
-<meta property="og:updated_time" content="2017-09-09T10:48:59.000Z">
+<meta property="og:updated_time" content="2017-10-18T02:38:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一个亿的项目正式启动了！">
-<meta name="twitter:description" content="开篇  前言 本人主要从事软件开发这块,现在主要是负责公司Android项目的开发，业余时间则喜欢看点书，运动和搞自媒体。前段时间利用晚上业余，又回味了一下吴军老师的《浪潮之巅》，然后准备睡觉的时候，躺床上辗转反侧死活睡不着。 于是就回忆了一下来深圳这几年的经历。且不说一把鼻涕一把泪，但还是挺心酸的。  从15年中旬来深圳，找到第一份实习工作(Android开发)。然后到年底换工作到现在的公司。期">
-<meta name="twitter:image" content="http://oif9go4ms.bkt.clouddn.com/20170909150494672167326.png">
+<meta name="twitter:title" content="Android PendingIntent日常填坑">
+<meta name="twitter:description" content="PendingIntent填坑记PendingIntent作用其实和Intent作用差不多，可以理解为是一种特殊的Intent。和Intent区别在于执行的时机不一样。Intent是立刻执行，PendingIntent是等待条件满足在执行。常用于通知、短信、闹钟等应用情景。 PendingIntent Flag介绍FLAG_ONE_SHOT：获取的PendingIntent只能使用一次。 FLAG">
 
 
 
@@ -139,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://coderhzq.github.io/2017/09/09/开篇/"/>
+  <link rel="canonical" href="https://coderhzq.github.io/2017/10/18/Android-PendingIntent日常填坑/"/>
 
 
 
 
 
-  <title>一个亿的项目正式启动了！ | Zhiqing Huang's Notes</title>
+  <title>Android PendingIntent日常填坑 | Zhiqing Huang's Notes</title>
   
 
 
@@ -310,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://coderhzq.github.io/2017/09/09/开篇/">
+    <link itemprop="mainEntityOfPage" href="https://coderhzq.github.io/2017/10/18/Android-PendingIntent日常填坑/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="黄志清">
@@ -327,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">一个亿的项目正式启动了！</h1>
+          <h1 class="post-title" itemprop="name headline">Android PendingIntent日常填坑</h1>
         
 
         <div class="post-meta">
@@ -339,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-09T17:00:27+08:00">
-                2017-09-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-18T10:18:58+08:00">
+                2017-10-18
               </time>
             
 
@@ -362,8 +359,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/开篇/" itemprop="url" rel="index">
-                    <span itemprop="name">开篇</span>
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
                   </a>
                 </span>
 
@@ -399,27 +396,28 @@
       
 
       
-        <h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><div align="center"><br><img src="http://oif9go4ms.bkt.clouddn.com/20170909150494672167326.png" alt="20170909150494672167326.png"><br></div>
-
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> 本人主要从事软件开发这块,现在主要是负责公司Android项目的开发，业余时间则喜欢看点书，运动和搞自媒体。前段时间利用晚上业余，又回味了一下吴军老师的《浪潮之巅》，然后准备睡觉的时候，躺床上辗转反侧死活睡不着。 于是就回忆了一下来深圳这几年的经历。且不说一把鼻涕一把泪，但还是挺心酸的。</p>
-<p> 从15年中旬来深圳，找到第一份实习工作(Android开发)。然后到年底换工作到现在的公司。期间做过兼职、接过外包私活、做过维护。对于一个大专生来说个人觉得还是很不容易的。我想这一点很多人应该深有体会的，好在我庆幸是这一行不是那么拼爹 拼背景 拼钱。要不对于一个三无人员真的只能蹲在墙角默默不敢说话了…。 搞技术的你必须的耐得住寂寞、受得了委屈、经得住诱惑还有就是加班 加班 加班</p>
-<p> 在技术这块现在的我主要是以Android为主。以及延伸(音视频/智能硬件/车载),平时喜欢倒腾javaWeb、服务器、C++这块。技术积累是有些。但我发现好多东西先前用过或者花了我大把时间研究过、解决过的问题随着时间一长发现还是有所忘记 至少不能完全把代码弄出来 只能记得主要步骤 具体的实现还是要去找下资料什么的。</p>
+        <h1 id="PendingIntent填坑记"><a href="#PendingIntent填坑记" class="headerlink" title="PendingIntent填坑记"></a>PendingIntent填坑记</h1><h2 id="PendingIntent作用"><a href="#PendingIntent作用" class="headerlink" title="PendingIntent作用"></a>PendingIntent作用</h2><p>其实和Intent作用差不多，可以理解为是一种特殊的Intent。和Intent区别在于执行的时机不一样。Intent是立刻执行，PendingIntent是等待条件满足在执行。常用于通知、短信、闹钟等应用情景。</p>
+<h2 id="PendingIntent-Flag介绍"><a href="#PendingIntent-Flag介绍" class="headerlink" title="PendingIntent Flag介绍"></a>PendingIntent Flag介绍</h2><p>FLAG_ONE_SHOT：获取的PendingIntent只能使用一次。</p>
+<p>FLAG_NO_CREATE：利用FLAG_NO_CREAT获取的PendingIntent，若描述的Intent不存在则返回NULL值</p>
+<p>FLAG_CANCEL_CURRENT：如果描述的PendingIntent已经存在，则在产生新的Intent之前会先取消掉当前的。</p>
+<p>FLAG_UPDATE_CURRENT：能够新new一个 Intent</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在使用PendingIntent.getBroadcast()往里面传带extra的Intent的时候(下面伪代码)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Intent intent = <span class="keyword">new</span> Intent(<span class="string">"com.test.action"</span>);</div><div class="line">intent.putExtra(<span class="string">"key"</span>, value);</div><div class="line">PendingIntent pi = PendingIntent.getBroadcast(<span class="keyword">this</span>, <span class="number">0</span>, in, <span class="keyword">null</span>, PendingIntent.FLAG_UPDATE_CURRENT);</div></pre></td></tr></table></figure>
+<p>上面为常见的使用方式。但是上面代码你连续出发2+次你就会发现你在接收的地方可能通过key拿到的value值是一样的。</p>
+<h2 id="产生问题的原因？"><a href="#产生问题的原因？" class="headerlink" title="产生问题的原因？"></a>产生问题的原因？</h2><ol>
+<li>Intent对象</li>
+<li>PengdingIntent Flag</li>
+<li>RequestCode</li>
+</ol>
+<p>Flag我们这里使用的是FLAG_UPDATE_CURRENT,查阅文档发现问题不在Flag上.</p>
+<p>查看Intent。在API描述里面有这么一段话翻译过来意思大概是</p>
 <blockquote>
-<p>原因在于:</p>
-<p>1.没及时消化和总结 </p>
-<p>2.适当的做笔记</p>
+<p>对于上文中的字面意思，如果判断为新Intent，则会更新对应的extra data，但是系统是如何判定新Intent的？Object.equals？Intent.filterEquals！但是从源码分析，filrerEquals 比较拥有同样的Action，不一样的data的 Intent 必定是返回false的.</p>
 </blockquote>
-<p> 所以说不能指望东西纯靠记,尤其是搞技术的 每年技术都可能日新月异 及时你通宵了原理 但还是会发现有些重要的东西还是要记。所以这也是我想写点东西的原因之一吧。把它当成一个对生活/学习/技术总结的地方。把你总结的东西分享出去,可能帮助到一些有着同样问题的人。</p>
- <div align="center"><br> <img src="http://oif9go4ms.bkt.clouddn.com/20170909150494802446534.png" alt="20170909150494802446534.png"><br></div>
-
-<h2 id="所以我想"><a href="#所以我想" class="headerlink" title="所以我想"></a>所以我想</h2><ul>
-<li>记录分享生活/工作/学习中一些有意思的事</li>
-<li>磨炼耐心</li>
-<li>写给以后的自己看</li>
-</ul>
-<blockquote>
-<p>把这个事当成一种生活态度</p>
-</blockquote>
+<p>那问题还会出在哪呢？只剩下RequestCode了。是因为RequestCode一样导致的？修改代码验证猜想</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Intent intent = <span class="keyword">new</span> Intent(<span class="string">"com.test.action"</span>);</div><div class="line">intent.putExtra(<span class="string">"key"</span>, value);</div><div class="line">PendingIntent pi = PendingIntent.getBroadcast(<span class="keyword">this</span>,UUID.randomUUID.hashCode(), in, <span class="keyword">null</span>, PendingIntent.FLAG_UPDATE_CURRENT);</div></pre></td></tr></table></figure>
+<p>发现接收结果却是改变了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>归根结底这个问题出在了RequestCode上。所以只要在使用的时刻使用不同的RequestCode就好了。常见使用场景有通知、短信群发等需要添加一个附加值以供在响应结果处做处理的地方。</p>
 
       
     </div>
@@ -437,7 +435,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/开篇/" rel="tag"># 开篇</a>
+            <a href="/tags/android/" rel="tag"># android</a>
           
         </div>
       
@@ -450,15 +448,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/09/11/AndroidStudio关联Android源码的正确姿势/" rel="next" title="AndroidStudio关联Android源码的正确姿势">
+                <i class="fa fa-chevron-left"></i> AndroidStudio关联Android源码的正确姿势
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/11/AndroidStudio关联Android源码的正确姿势/" rel="prev" title="AndroidStudio关联Android源码的正确姿势">
-                AndroidStudio关联Android源码的正确姿势 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -593,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#开篇"><span class="nav-number">1.</span> <span class="nav-text">开篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所以我想"><span class="nav-number">1.2.</span> <span class="nav-text">所以我想</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PendingIntent填坑记"><span class="nav-number">1.</span> <span class="nav-text">PendingIntent填坑记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PendingIntent作用"><span class="nav-number">1.1.</span> <span class="nav-text">PendingIntent作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PendingIntent-Flag介绍"><span class="nav-number">1.2.</span> <span class="nav-text">PendingIntent Flag介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.3.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#产生问题的原因？"><span class="nav-number">1.4.</span> <span class="nav-text">产生问题的原因？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
 
           </div>
